@@ -6,7 +6,7 @@ from json import dumps
 def test_hello_service_get():
     user = 'tomer'
     password = 'cool'
-    res = requests.get('http://app:5001', auth=HTTPBasicAuth(user, password))
+    res = requests.get('http://localhost:5001', auth=HTTPBasicAuth(user, password))
     assert res.text == 'hello world', 'Expecting:  "hello world", Actual: {0}'.format(res.text)
 
 
