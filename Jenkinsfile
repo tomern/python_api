@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 dir('tests') {
-                    sh 'pytest -vv --junit-xml=reports/report.xml'
+                    sh 'pytest tests_api.py --junit-xml=reports/report.xml'
                 }
             }
             post {
