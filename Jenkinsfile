@@ -15,6 +15,7 @@ pipeline {
                 dockerfile {
                     dir 'tests'
                     filename 'Dockerfile'
+                    args '--link app'
                 }
             }
             steps {
