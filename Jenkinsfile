@@ -24,7 +24,7 @@ pipeline {
             }
             post {
                 always {
-                    junit tests/reports/report.xml
+                    junit 'tests/reports/report.xml'
                     sh 'docker rm -f app'
                 }
             }
