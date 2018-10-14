@@ -7,7 +7,7 @@ pipeline {
                 dir('web') {
                     sh 'docker rm -f app'
                     sh 'docker build -t app .'
-                    sh 'docker run -d -p 8083:5000 --name app app -'
+                    sh 'docker run -d -p 8083:5000 --name app app'
                 }
             }
         }
