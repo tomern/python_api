@@ -12,7 +12,7 @@ def test_hello_service_get():
 
 def test_ping_service_get():
     res = requests.get('http://app:8083/ping')
-    assert res.text == 'pong', 'Expecting: "pong", Actual: {0}'.format(res.text)
+    assert res.text == 'pong1', 'Expecting: "pong1", Actual: {0}'.format(res.text)
 
 
 def test_get_all_tasks_service_get():
