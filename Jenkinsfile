@@ -5,6 +5,7 @@ pipeline {
             agent any
             steps {
                 dir('web') {
+                    sh 'docker rm -f app'
                     sh 'docker build -t app .'
                     sh 'docker run -d -p 5001:5000 --name app app'
                 }
@@ -26,7 +27,6 @@ pipeline {
             post {
                 always {
                     junit 'tests/reports/report.xml'
-                    sh 'docker rm -f app'
                 }
             }
         }
