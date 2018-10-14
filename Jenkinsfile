@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir('web') {
                     sh 'docker build -t app .'
-                    sh 'docker run -d -p 5000:5000 --name app'
+                    sh 'docker run -d -p 5000:5000 --name app app'
                 }
             }
         }
