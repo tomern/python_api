@@ -7,7 +7,7 @@ def test_hello_service_get():
     user = 'tomer'
     password = 'cool'
     res = requests.get('http://127.0.0.1:5000', auth=HTTPBasicAuth(user, password))
-    assert res.text == 'hello world', 'Expecting: "hello world", Actual: {0}'.format(res.text)
+    assert res.text == 'hello world', 'Expecting:  "hello world", Actual: {0}'.format(res.text)
 
 
 def test_ping_service_get():
