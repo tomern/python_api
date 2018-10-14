@@ -6,12 +6,12 @@ from json import dumps
 def test_hello_service_get():
     user = 'tomer'
     password = 'cool'
-    res = requests.get('http://localhost:5001', auth=HTTPBasicAuth(user, password))
+    res = requests.get('http://localhost:8082', auth=HTTPBasicAuth(user, password))
     assert res.text == 'hello world', 'Expecting:  "hello world", Actual: {0}'.format(res.text)
 
 
 def test_ping_service_get():
-    res = requests.get('http://app:5001/ping')
+    res = requests.get('http://app:8082/ping')
     assert res.text == 'pong', 'Expecting: "pong", Actual: {0}'.format(res.text)
 
 
