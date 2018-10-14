@@ -1,4 +1,4 @@
-FROM python:latest
+FROM frolvlad/alpine-python3
 COPY web /app
 WORKDIR app
 RUN pip install -r requirements.txt
