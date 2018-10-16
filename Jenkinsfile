@@ -33,6 +33,13 @@ pipeline {
             post {
                 always {
                     junit 'tests/reports/report.xml'
+                    script {
+                         try {
+                            sh 'docker rm -f app'
+                         }
+                         catch(exception){
+                         }
+                    }
                 }
             }
         }
