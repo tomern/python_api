@@ -5,7 +5,13 @@ pipeline {
             agent any
             steps {
                 dir('web') {
-                    sh 'docker rm -f app'
+                    script {
+                         try {
+                            sh 'docker rm -f app'
+                         }
+                         catch(exception){
+                         }
+                    }
                     sh 'docker build -t app .'
                     sh 'docker run -d -p 8083:8083 --name app app'
                 }
